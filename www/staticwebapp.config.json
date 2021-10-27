@@ -1,0 +1,24 @@
+{
+	"routes":
+	[
+		{
+			"route": "/api/tasks/*",
+			"allowedRoles":
+			[
+				"authenticated"
+			]
+		},
+		{
+			"route": "/.auth/me",
+			"allowedRoles":
+			[
+				"authenticated"
+			]
+		}
+	],
+	"responseOverrides": {
+        "401": {
+            "rewrite": "/login.html"
+        }
+    },
+}
