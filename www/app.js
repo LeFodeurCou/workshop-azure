@@ -4,7 +4,6 @@ const empty = document.querySelector('#empty');
 const usernameElement = document.querySelector('#username');
 
 async function getUser() {
-    e.preventDefault();
 
     const userResponse = await fetch('/.auth/me', {
         method: 'GET',
