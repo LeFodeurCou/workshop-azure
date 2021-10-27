@@ -6,7 +6,7 @@ module.exports = async function (context, req) {
 	const decoded = encoded.toString('ascii');
 	const user = JSON.parse(decoded);
 
-	if (req.body.label)
+	if (typeof req.body.label !== 'undefined')
 	{
 		const client = await mongoClient.connect(process.env.CONNECTION_STRING);
 		const database = client.db(process.env.DATABASE_NAME);
