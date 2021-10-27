@@ -4,7 +4,17 @@ const empty = document.querySelector('#empty');
 const usernameElement = document.querySelector('#username');
 
 async function getUser() {
-    // TODO
+    e.preventDefault();
+
+    const userResponse = await fetch('/.auth/me', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const userPayload = await userResponse.json();
+
+	usernameElement.appendChild(document.createTextNode(userPayload.userDetails));
 }
 
 async function updateTask() {
