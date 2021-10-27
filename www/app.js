@@ -13,7 +13,7 @@ async function getUser() {
     });
     const userPayload = await userResponse.json();
 
-	usernameElement.appendChild(document.createTextNode(userPayload.userDetails));
+	usernameElement.appendChild(document.createTextNode(userPayload.clientPrincipal.userDetails));
 }
 
 async function updateTask() {
