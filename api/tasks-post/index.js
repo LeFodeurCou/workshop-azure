@@ -22,6 +22,7 @@ module.exports = async function (context, req) {
 			// status: 200, /* Defaults to 200 */
 			body: req.body
 		};
+		return;
 	}
 	
 	// const tasks = await response.toArray();
